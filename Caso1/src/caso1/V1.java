@@ -30,7 +30,6 @@ public class V1 extends JFrame implements ActionListener {
 	private JButton btnSumarDosReales;
 	private JScrollPane scrollPane;
 	private JTextArea txtS;
-	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -119,17 +118,8 @@ public class V1 extends JFrame implements ActionListener {
 				scrollPane.setViewportView(txtS);
 			}
 		}
-		{
-			btnNewButton_1 = new JButton("Borrar");
-			btnNewButton_1.addActionListener(this);
-			btnNewButton_1.setBounds(10, 95, 89, 23);
-			contentPane.add(btnNewButton_1);
-		}
 	}
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btnNewButton_1) {
-			do_btnNewButton_1_actionPerformed(e);
-		}
 		if (e.getSource() == btnSumarDosReales) {
 			do_btnSumarDosReales_actionPerformed(e);
 		}
@@ -170,8 +160,6 @@ public class V1 extends JFrame implements ActionListener {
 		double num2=Double.parseDouble(txtN2.getText());
 		Calculadora c=new Calculadora(num1, num2);
 		txtS.append("La suma de dos reales es: "+c.Sumar(num1, num2));
-	}
-	protected void do_btnNewButton_1_actionPerformed(ActionEvent e) {
 	}
 }
 
